@@ -249,7 +249,7 @@ app.get("/ly/:secret",async function(req,res){
     await connection.close();
     res.redirect(user.url);
     } catch (error) {
-        res.json({message:"no links found"})
+        res.json(error)
     }
 })
 
