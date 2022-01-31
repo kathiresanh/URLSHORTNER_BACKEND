@@ -232,7 +232,7 @@ app.post("/urlshortner",async function(req,res){
         req.body.secret = Math.floor((Math.random()*10000))
         let user = await db.collection("URL").insertOne(req.body)
         await connection.close();
-        res.json({message:`http://localhost:3001/ly/${req.body.secret}`})
+        res.json({message:`https://urlshortnerbackend1.herokuapp.com/ly/${req.body.secret}`})
     }catch(error){
         res.json({message:"no access"})
     }
