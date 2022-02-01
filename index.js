@@ -73,7 +73,7 @@ try {
             from: process.env.USER_NAME,
             to: req.body.email,
             subject: 'welcome to ionix',
-            text: `http://localhost:3001/activation/${req.body.email}/${req.body.token}`
+            text: `https://urlshortnerbackend1.herokuapp.com/activation/${req.body.email}/${req.body.token}`
           };
           
           transporter.sendMail(mailOptions, function(error, info){
